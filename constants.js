@@ -4,4 +4,4 @@
 // но значение является неизменяемым,
 // поэтому при попытке присвоить другое значение, будет ошибка
 const variable = 'initial value';
-// variable = 'changed value'; // error
+// variable = 'changed value'; // error: is read-only
