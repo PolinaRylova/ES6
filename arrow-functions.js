@@ -55,7 +55,7 @@
 // важное преимущество стрелочных функций - они сохраняют контекст
 // c ES5 для использования родительского контекста
 // приходилось записывать ссылку на него в переменную
-{
+
   function Person1() {
     // записываем контекст в переменную, чтобы
     // он был доступен внутри вложенных функций
@@ -78,10 +78,10 @@
     console.log('Person1', person.age); // 9
     person.die();
   }, 1000);
-}
+
 
 // в ES6 уже такой необходимости нет
-{
+
   function Person2() {
     this.age = 0;
 
@@ -94,11 +94,10 @@
     };
   }
 
-  let person = new Person2();
-  console.log('Person2', person.age); // 0
+  let person2 = new Person2();
+  console.log('Person2', person2.age); // 0
 
   setTimeout(() => {
-    console.log('Person2', person.age); // 9
-    person.die();
+    console.log('Person2', person2.age); // 9
+    person2.die();
   }, 1000);
-}
